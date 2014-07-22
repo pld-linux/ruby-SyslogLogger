@@ -2,7 +2,7 @@
 Summary:	Logger replacement that logs to syslog
 Name:		ruby-%{pkgname}
 Version:	1.4.0
-Release:	1
+Release:	2
 License:	Ruby License
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
 # Source0-md5:	49979374ba46d3600c9969f2815ba1d0
