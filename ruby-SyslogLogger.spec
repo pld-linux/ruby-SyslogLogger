@@ -1,11 +1,11 @@
 %define pkgname SyslogLogger
 Summary:	Logger replacement that logs to syslog
 Name:		ruby-%{pkgname}
-Version:	1.4.0
-Release:	3
+Version:	2.0
+Release:	1
 License:	Ruby License
-Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
-# Source0-md5:	49979374ba46d3600c9969f2815ba1d0
+Source0:	https://rubygems.org/downloads/%{pkgname}-%{version}.gem
+# Source0-md5:	3f656ecb96744d2c13d74be9c18e46eb
 Group:		Development/Languages
 URL:		http://seattlerb.rubyforge.org/SyslogLogger/
 BuildRequires:	rpm-rubyprov
@@ -42,7 +42,7 @@ ri documentation for %{pkgname}.
 Dokumentacji w formacie ri dla %{pkgname}.
 
 %prep
-%setup -q
+%setup -q -n %{pkgname}-%{version}
 
 %build
 rdoc --ri --op ri lib
@@ -64,8 +64,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc History.txt README.txt
-%{ruby_vendorlibdir}/*.rb
 %{ruby_vendorlibdir}/analyzer_tools
+%{ruby_vendorlibdir}/syslog
 
 %files rdoc
 %defattr(644,root,root,755)
@@ -73,4 +73,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files ri
 %defattr(644,root,root,755)
-%{ruby_ridir}/SyslogLogger
+%{ruby_ridir}/Syslog
